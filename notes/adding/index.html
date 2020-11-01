@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Adding files and tracking changes</title>
+
+    <meta name="description" content="">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/online-course-notes-11ty/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/online-course-notes-11ty/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/online-course-notes-11ty/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/online-course-notes-11ty/site.webmanifest">
+    <meta name="theme-color" content="#d3374a">
+
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Adding files and tracking changes">
+    <meta property="og:site_name" content="Introduction to Programming">
+    <meta property="og:locale" content="en_GB">
+    <meta property="article:author" content="Martin Chorley">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@martinjc">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:title" content="Adding files and tracking changes">
+
+    <link rel="icon" href="/online-course-notes-11ty/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Scope+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/online-course-notes-11ty/css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism.css">
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+  <body>
+    <header>
+</header>
+    <header>
+    <h1> <a href="">
+            Adding files and tracking changes
+        </a></h1>
+</header>
+
+<div class="container">
+    <nav class="sidebar">
+        <a href='/online-course-notes-11ty/'>Home</a>
+        <ul><li><a href="/online-course-notes-11ty/notes/">Why Git?</a></li><li><a href="/online-course-notes-11ty/notes/adding/">Adding files and tracking changes</a></li></ul>
+        <a href="/online-course-notes-11ty/about/">About</a>
+    </nav>
+
+    <div class="content">
+        <iframe src="https://cardiff.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=c3becb04-f1b6-4b55-bf20-ac6601798b6c&v=1" width="720" height="405" style="padding: 0px; border: 1px solid #464646;" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+<p><small>If the embed above does not work here is a <a href="https://cardiff.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c3becb04-f1b6-4b55-bf20-ac6601798b6c" target="blank">link to the full version of the video</a></small></p>
+<p>To be able to track changes to our files, we need to create a Git <code>repository</code>. This repository is the sum of our current files that we are tracking, plus all the changes and history that go along with them. Creating a git repository is straightforward; to create an empty repository in the current directory we use the following command:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> init <span class="token builtin class-name">.</span></code></pre>
+<p>Once we have a repository and some files to track, there are a few commands we’ll need to use to control how Git tracks our files. Tracking files in a repository is a two stage process. First we <code>stage</code> the files, which means telling Git to prepare to add the current changes to the file to the repository. Then we <code>commit</code> the changes, which means a record of the changes we staged is added to the repository itself.</p>
+<p>We add changes to a file to the commit <code>stage</code> using</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> <span class="token operator">&lt;</span>FILENAME<span class="token operator">></span></code></pre>
+<p><code>git add</code> tells Git that it should prepare to add a record of the current changes to the specified file to the repository. Once we have all the changes we want to add to our repository staged, we commit them:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> commit -m <span class="token string">"&lt;my helpful commit message>"</span></code></pre>
+<p>This creates a new commit in the repository with the given <code>commit message</code>, logging all changes to files that were staged in the previous step.</p>
+<p>By using <code>git add</code> and <code>git commit</code> whenever we have made substantial changes to our project that we feel are worthy of tracking, we can keep a record of all changes to our project over time.</p>
+
+        <div class="nextprev"><p class="previous">Previous: <a href="/online-course-notes-11ty/notes/">Why Git?</a></p>
+        </div>
+        <div class="comments">
+            <script src="https://utteranc.es/client.js"
+            repo="martinjc/introduction-to-git"
+            issue-term="title"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+            </script>
+        </div>
+        
+    </div>
+</div>
+
+<script>
+document.querySelectorAll('.answer-block').forEach(d => {
+    d.addEventListener('click', (e) => {
+        d.querySelector('.feedback').classList.toggle('hidden');
+        d.classList.toggle('selected');
+    });
+});
+</script>
+    
+  </body>
+</html>
