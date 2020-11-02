@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Using the history</title>
+
+    <meta name="description" content="">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/online-course-notes-11ty/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/online-course-notes-11ty/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/online-course-notes-11ty/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/online-course-notes-11ty/site.webmanifest">
+    <meta name="theme-color" content="#d3374a">
+
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Using the history">
+    <meta property="og:site_name" content="Introduction to Programming">
+    <meta property="og:locale" content="en_GB">
+    <meta property="article:author" content="Martin Chorley">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@martinjc">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:title" content="Using the history">
+
+    <link rel="icon" href="/online-course-notes-11ty/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Scope+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/online-course-notes-11ty/css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism.css">
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+  <body>
+    <header>
+</header>
+    <header>
+    <h1> <a href="">
+            Using the history
+        </a></h1>
+</header>
+
+<div class="container">
+    <nav class="sidebar">
+        <a href='/online-course-notes-11ty/'>Home</a>
+        <ul><li><a href="/online-course-notes-11ty/notes/">Why Git?</a></li><li><a href="/online-course-notes-11ty/notes/adding/">Adding files and tracking changes</a></li><li><a href="/online-course-notes-11ty/notes/remote/">Using git + Gitlab</a></li><li><a href="/online-course-notes-11ty/notes/history/">Using the history</a></li></ul>
+        <a href="/online-course-notes-11ty/about/">About</a>
+    </nav>
+
+    <div class="content">
+        <iframe src="https://cardiff.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=7761e645-dcf9-4da6-8947-ac66017aed91&v=1" width="720" height="405" style="padding: 0px; border: 1px solid #464646;" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+<p><small>If the embed above does not work here is a <a href="https://cardiff.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=7761e645-dcf9-4da6-8947-ac66017aed91" target="blank">link to the full version of the video</a></small></p>
+<p>One of the other useful things about tracking your changes using Git is being able to go back to any point in your project and see what the code looked like, or even to reset or revert the commits that happened after that point.</p>
+<p>There are three main commands for examining or undoing our changes.</p>
+<ul>
+<li><code>git checkout</code></li>
+<li><code>git reset --hard</code></li>
+<li><code>git revert</code></li>
+</ul>
+<p>All three are discussed below, but probably you want <code>git revert</code>.</p>
+<h2><code>git checkout</code></h2>
+<p>The <code>checkout</code> command is actually more commonly used to create new branches<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> but it can also be used to have a look at the state of our project at any point in time. The command:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> checkout <span class="token operator">&lt;</span>COMMIT_ID<span class="token operator">></span></code></pre>
+<p>Will allow us to see the state of our whole project at the time of that commit. To get back to the current state, we can do</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> checkout master</code></pre>
+<h2><code>git reset --hard</code></h2>
+<p><code>git reset</code> can be used to remove any trace of a particular commit. This undoes any changes made in that commit and resets the files to their previous state. However, this can only be used to remove local changes - if those changes have already been pushed to a remote repository they will still exist, and the next time you try to synchronise git will try to force you to re-include those changes in your project. To remove changes that have already been pushed you should use …</p>
+<h2><code>git revert</code></h2>
+<p>This command lets you undo changes made in a commit - it essentially creates a new commit with the inverse of the original changes applied. This makes the changes more public and transparent, and makes it easier to keep remote repositories in sync.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>We’ll worry about these later <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+        <div class="nextprev"><p class="previous">Previous: <a href="/online-course-notes-11ty/notes/remote/">Using git + Gitlab</a></p>
+        </div>
+        <div class="comments">
+            <script src="https://utteranc.es/client.js"
+            repo="martinjc/introduction-to-git"
+            issue-term="title"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+            </script>
+        </div>
+        
+    </div>
+</div>
+
+<script>
+document.querySelectorAll('.answer-block').forEach(d => {
+    d.addEventListener('click', (e) => {
+        d.querySelector('.feedback').classList.toggle('hidden');
+        d.classList.toggle('selected');
+    });
+});
+</script>
+    
+  </body>
+</html>

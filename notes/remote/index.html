@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>About</title>
+    <title>Using git + Gitlab</title>
 
     <meta name="description" content="">
 
@@ -18,7 +18,7 @@
 
     <meta property="og:url" content="">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="About">
+    <meta property="og:title" content="Using git + Gitlab">
     <meta property="og:site_name" content="Introduction to Programming">
     <meta property="og:locale" content="en_GB">
     <meta property="article:author" content="Martin Chorley">
@@ -26,7 +26,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@martinjc">
     <meta name="twitter:url" content="">
-    <meta name="twitter:title" content="About">
+    <meta name="twitter:title" content="Using git + Gitlab">
 
     <link rel="icon" href="/online-course-notes-11ty/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Scope+One&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
 </header>
     <header>
     <h1> <a href="">
-            About
+            Using git + Gitlab
         </a></h1>
 </header>
 
@@ -51,19 +51,23 @@
     </nav>
 
     <div class="content">
-        <h1>The course</h1>
-<p>This course is intended as a brief introduction to the Git for people who have very little programming experience. It consists of this set of notes and some videos which repeat and this set of notes while demonstrating the usage of Git.</p>
-<h1>The notes</h1>
-<p>These notes are written in markdown and built using <a href="https://www.11ty.dev/">11ty</a>. All notes are checked<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> by <a href="proselint.com">Proselint</a> and <a href="https://github.com/get-alex/alex">Alex</a> for readability and inclusivity. This might not catch everything - if you see something that you think needs changing, please <a href="https://github.com/martinjc/programming-intro/issues">let us know</a>!</p>
+        <iframe src="https://cardiff.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=aa0ab576-8681-4088-9a11-ac66017a5c93&v=1" width="720" height="405" style="padding: 0px; border: 1px solid #464646;" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+<p><small>If the embed above does not work here is a <a href="https://cardiff.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=aa0ab576-8681-4088-9a11-ac66017a5c93" target="blank">link to the full version of the video</a></small></p>
+<p>One of the really neat things about Git is that it works as a distributed service, in that it allows us to keep multiple copies of a repository in different places, and use Git to keep them all in sync with one another.</p>
+<p>A really common use case is to keep a local copy of your repository on your local machine, and another copy of the repository in an online service like <a href="https://www.github.com">Github</a> or <a href="https://www.gitlab.com">Gitlab</a><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
+<p>The University has a <a href="https://git.cardiff.ac.uk">Gitlab service</a> to which you have access. You can find this at <a href="https://git.cardiff.ac.uk"><code>git.cardiff.ac.uk</code></a>.</p>
+<p>To keep a copy of our repository in one of these services, we must add the server as a new <code>remote</code> to our repository.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> remote <span class="token function">add</span> <span class="token operator">&lt;</span>REMOTE NAME<span class="token operator">></span> <span class="token operator">&lt;</span>BRANCH NAME<span class="token operator">></span> <span class="token operator">&lt;</span>REMOTE ADDRESS<span class="token operator">></span></code></pre>
+<p>Then we use the <code>git push</code> command to send any local changes to our remote repository. If we ever have changes in our remote repository that we need to incorporate into our local repository we can use <code>git pull</code> to synchronise these changes from the server and merge them into our current code. We also have the <code>git fetch</code> and <code>git merge</code> commands to do this in two separate steps</p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>Thanks <a href="https://github.com/drvinceknight">Vince</a>! <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+<li id="fn1" class="footnote-item"><p>Other services also exist… <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
 
-        <div class="nextprev">
+        <div class="nextprev"><p class="next">Next: <a href="/online-course-notes-11ty/notes/history/">Using the history</a></p><p class="previous">Previous: <a href="/online-course-notes-11ty/notes/adding/">Adding files and tracking changes</a></p>
         </div>
         <div class="comments">
             <script src="https://utteranc.es/client.js"
