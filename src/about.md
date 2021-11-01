@@ -5,7 +5,7 @@ title: About
 
 # The course
 
-This course is intended as a brief introduction to the Git for people who have very little programming experience. It consists of this set of notes and some videos which repeat and this set of notes while demonstrating the usage of Git. 
+This course is intended as a brief introduction to Git for people who have very little programming experience. It consists of this set of notes and some videos which repeat and this set of notes while demonstrating the usage of Git. 
 
 
 # The notes

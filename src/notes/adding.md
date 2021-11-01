@@ -4,7 +4,7 @@ order: 2
 title: Adding files and tracking changes
 ---
 
-{% panopto "c3becb04-f1b6-4b55-bf20-ac6601798b6c" %}
+{% panopto "e44b063e-df33-4179-809b-add300e72b19" %}
 
 
 To be able to track changes to our files, we need to create a Git `repository`. This repository is the sum of our current files that we are tracking, plus all the changes and history that go along with them. Creating a git repository is straightforward; to create an empty repository in the current directory we use the following command:

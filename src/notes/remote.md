@@ -4,7 +4,7 @@ order: 3
 title: Using git + Gitlab
 ---
 
-{% panopto "aa0ab576-8681-4088-9a11-ac66017a5c93" %}
+{% panopto "9ddd5877-020f-4bb8-8f59-add300e72c2d" %}
 
 One of the really neat things about Git is that it works as a distributed service, in that it allows us to keep multiple copies of a repository in different places, and use Git to keep them all in sync with one another.
 
